@@ -23,47 +23,15 @@ console.log(max)
 
 // 2 - Crie um hashmap (ou um objeto simples em JavaScript) que contenha as funções elementares de adição, subtração, multiplicação e divisão.
 
-// A) Leve em consideração que a divisão não deve permitir dividendo 0
-const hashmapMath = {
-  div : (a, b) => {
-    if(b === 0) return null
-    return a / b
-  }
-}
-
-// B) A função sum permite um array como parâmetro de entrada e adiciona todos os seus elementos.
-const hashmapMath = {
-  sum : ([]) => [].reduce((acc, num ) => acc + num),
-}
-
-// C) A função de subtração permite um array como parâmetro de entrada e subtrai todos os seus elementos.
-const hashmapMath = {
-  sub : ([]) => [].reduce((acc, num ) => acc - num),
-}
-
-// D) Função de multiplicação - Idem
-const hashmapMath = {
-  mul : ([]) => [].reduce((acc, num ) => acc * num),
-}
-
-// E) A função de divisão aceita dois parâmetros: a e b.
-const hashmapMath = {
-  div : (a, b) => {
-    if(typeof a !== 'number' && b !== 'number') return null
-    if(b === 0) return null
-    return a / b
-  }
-}
-
 const hashmapMath = {
   div : (a, b) => {
     if(typeof a !== 'number' && b !== 'number') return null
     if(b === 0) return null
     return a / b
   },
-  sum : ([]) => [].reduce((acc, num ) => acc + num),
-  sub : ([]) => [].reduce((acc, num ) => acc - num),
-  mul : ([]) => [].reduce((acc, num ) => acc * num),
+  sum : (array) => array.reduce((acc, num ) => acc + num),
+  sub : (array) => array.reduce((acc, num ) => acc - num),
+  mul : (array) => array.reduce((acc, num ) => acc * num),
 }
 
 // 3 - Crie um algoritmo que gere o seguinte padrão de ID aleatório: XXXX-AAAA-BBBB-CCCC
